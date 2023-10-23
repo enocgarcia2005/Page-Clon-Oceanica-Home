@@ -1,16 +1,26 @@
 @font-face {
     font-family:openSans-medium ;
-    src: url("fonts/OpenSans-Medium.ttf");
+    src: url("/fonts/OpenSans-Medium.ttf");
 }
 
 @font-face {
     font-family:openSans-extraBold ;
-    src: url("fonts/OpenSans-ExtraBold.ttf");
+    src: url("/fonts/OpenSans-ExtraBold.ttf");
 }
 
 @font-face {
     font-family:openSans-regular ;
-    src: url("fonts/OpenSans-Regular.ttf");
+    src: url("/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family:condensed-bold ;
+    src: url("/fonts/OpenSans_Condensed-Bold.ttf");
+}
+
+@font-face {
+    font-family: condensed-medium;
+    src: url("/fonts/OpenSans_Condensed-Medium.ttf");
 }
 
 *{
@@ -211,8 +221,6 @@
     color:  #012b5d;
 }
 
-
-
 .carousel-section{
     position: relative;
     height: 45vh;
@@ -328,23 +336,30 @@
 
 .services{
     padding: 40px 0;
+}
+
+.services,
+.asociation-title{
     margin: 0 auto;
     width: 90%;
     max-width: 1200px;
 }
 
-.services-title{
+.services-title,
+.asociation-text{
     display: block;
     position: relative;
     font-size: 1.7rem;
     margin: 0;
+    font-family: 'condensed-bold', sans-serif;
     padding: 0;
     width: fit-content;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     text-transform: uppercase;
 }
 
-.services-title:before{
+.services-title:before
+,.asociation-text:before{
     display: block;
     position: absolute;
     bottom: 0;
@@ -427,7 +442,7 @@
 
 .figures-text{
     text-transform: uppercase;
-    letter-spacing: 7px;
+    letter-spacing: 10px;
     font-family: 'openSans-extraBold', sans-serif;
 }
 
@@ -451,7 +466,7 @@
     align-items: center;
     height: 200px;
     min-width: 130px;
-    padding: 10px 0;
+    padding-top: 5px;
     border-radius: 20px;
     gap: 10px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
@@ -477,6 +492,122 @@
     border-radius: 50%;
 }
 
+.asociations{
+    padding: 40px 0;
+    width: 100%;
+    background-color: rgb(241, 242, 244);
+}
+.asociation-title{
+    padding-bottom: 40px;
+}
+
+.asociation-desc{
+    font-size: 0.9rem;
+    font-family: 'openSans-regular', sans-serif;
+}
+
+.asociation-image{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.asociation-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+}
+
+.asociations-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.footer{
+    width: 100%;
+    background-color: #012B5D;
+}
+
+.footer-container{
+    display: flex;
+    min-height: 100px;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 0 auto;
+    gap: 10px;
+    max-width: 1200px;
+}
+
+.logo-container{
+    flex: 1;
+}
+
+.logo-2{
+    width: 150px;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 10px;
+}
+
+.footer-list-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-list-link{
+    text-decoration: none;
+    font-family: 'condensed-regular', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color:#fff
+}
+
+.adress{
+    color:  rgb(54, 165, 222);
+    margin-bottom: 10px;
+    font-size: .8rem;
+    text-align: center;
+    font-family: 'openSans-regular', sans-serif;
+    width:fit-content ;
+}
+
+.social-media{
+    background-color: rgb(54, 165, 222);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1070px){
     .menu {
       display: block;
@@ -494,14 +625,27 @@
         justify-content: center;
     }
 
-    .figures-cards{
+    .footer-container,
+    .footer-list-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-container,
+    .footer-list-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .figures-cards,
+    .asociations-cards{
         justify-content: center;
     }
 }
 
 @media screen and (max-width:768px) {
     .feature-text{
-        padding: 0 10px;
+        padding: 0 7px;
     }
     .feature-title{
         font-size: 1.5rem;
@@ -515,7 +659,6 @@
     .service-card{
         flex: 1;
     }
-    .figures-cards{
-        flex: 1;
-    }
+
+
 }
