@@ -298,6 +298,7 @@
     background-color: #ffffff1c;
     border: 1px solid #fff;
     margin: 5px;
+    cursor: pointer;
 }
 
 .actived{
