@@ -278,6 +278,32 @@
     width: 40px;
 }
 
+.bullets-container{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    bottom: 0;
+    left: 25%;
+}
+
+.bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff1c;
+    border: 1px solid #fff;
+    margin: 5px;
+}
+
+.actived{
+    background-color: #fff;
+}
+
 /* Section feature */
 .feature-section {
     display: flex;
