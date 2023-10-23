@@ -1,3 +1,18 @@
+@font-face {
+    font-family:openSans-medium ;
+    src: url("fonts/OpenSans-Medium.ttf");
+}
+
+@font-face {
+    font-family:openSans-extraBold ;
+    src: url("fonts/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family:openSans-regular ;
+    src: url("fonts/OpenSans-Regular.ttf");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -311,6 +326,157 @@
     font-weight: 300;
 }
 
+.services{
+    padding: 40px 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.services-title{
+    display: block;
+    position: relative;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.services-title:before{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 75%;
+    height: 3px;
+    background-color: rgb(54,165, 222);
+}
+
+.services-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.service-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 180px;
+    min-width: 215px;
+    border-radius: 20px;
+    gap: 10px;
+    background-color: rgba(2, 31, 73, 0.8);
+}
+
+.service-image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.services-card-title{
+    color: #fff;
+    font-size: 1.2rem;
+    max-width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'openSans-extraBold', sans-serif;
+}
+
+.btn-service{
+    color: #000;
+    background-color: rgb(138, 199, 247);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.figures-section{
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%), url(/assets/containers.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.figures-title{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background:  rgb(54,165, 222);
+}
+
+.figures-text{
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-family: 'openSans-extraBold', sans-serif;
+}
+
+.figures-cards{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    min-height: 300px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.figure-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    min-width: 130px;
+    padding: 10px 0;
+    border-radius: 20px;
+    gap: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background: linear-gradient(180deg, rgba(171, 221, 238, 0.1) 0%, rgb(171, 221, 238) 100%);
+}
+
+.figure-card-title{
+    font-size: 2rem;
+    font-family: 'openSans-extraBold', sans-serif;
+}
+
+.figure-desc{
+    font-size: 0.6rem;
+    max-width: 70%;
+    text-align: center;
+}
+
+.image-container{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+}
+
 @media screen and (max-width: 1070px){
     .menu {
       display: block;
@@ -324,6 +490,13 @@
     .feature-title{
         font-size: 3rem;
     }
+    .services-cards{
+        justify-content: center;
+    }
+
+    .figures-cards{
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -331,11 +504,18 @@
         padding: 0 10px;
     }
     .feature-title{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .feature-desc{
         max-width: 90%;
         font-size: 0.8rem;
+    }
+
+    .service-card{
+        flex: 1;
+    }
+    .figures-cards{
+        flex: 1;
     }
 }
