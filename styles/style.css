@@ -1,20 +1,20 @@
 @font-face {
-    font-family:openSans-medium ;
+    font-family: openSans-medium;
     src: url("/fonts/OpenSans-Medium.ttf");
 }
 
 @font-face {
-    font-family:openSans-extraBold ;
+    font-family: openSans-extraBold;
     src: url("/fonts/OpenSans-ExtraBold.ttf");
 }
 
 @font-face {
-    font-family:openSans-regular ;
+    font-family: openSans-regular;
     src: url("/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
-    font-family:condensed-bold ;
+    font-family: condensed-bold;
     src: url("/fonts/OpenSans_Condensed-Bold.ttf");
 }
 
@@ -62,7 +62,7 @@
 }
 
 .nav-list:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0;
@@ -90,11 +90,11 @@
     text-transform: uppercase;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
-    font-family: 'openSans-medium', sans-serif;
+    font-family: "openSans-medium", sans-serif;
 }
 
 .list-item:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0;
@@ -133,7 +133,7 @@
     padding: 10px;
     top: 35px;
     width: 300px;
-    background-color: #012B5D;
+    background-color: #012b5d;
     z-index: 100;
 }
 
@@ -213,7 +213,7 @@
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
-    font-family: 'openSans-extraBold', sans-serif;
+    font-family: "openSans-extraBold", sans-serif;
     padding: 5px 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -278,20 +278,26 @@
     width: 40px;
 }
 
-.bullets-container{
+.bullet{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.bullets-container {
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 10%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    bottom: 0;
-    left: 25%;
+    bottom: 10px;
+    border-radius: 20px;
+    z-index: 1000;
 }
 
-.bullet{
+.bullet-item {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -301,7 +307,7 @@
     cursor: pointer;
 }
 
-.actived{
+.actived {
     background-color: #fff;
 }
 
@@ -341,7 +347,7 @@
 
 .feature-title {
     display: block;
-    font-family: 'openSans-extraBold', sans-serif;
+    font-family: "openSans-extraBold", sans-serif;
     position: relative;
     width: fit-content;
     padding: 0;
@@ -364,7 +370,7 @@
 .feature-desc {
     text-align: justify;
     max-width: 450px;
-    font-family: 'openSans-regular', sans-serif;
+    font-family: "openSans-regular", sans-serif;
     font-weight: 300;
 }
 
@@ -383,7 +389,7 @@
     position: relative;
     font-size: 1.7rem;
     margin: 0;
-    font-family: 'condensed-bold', sans-serif;
+    font-family: "condensed-bold", sans-serif;
     padding: 0;
     width: fit-content;
     letter-spacing: 5px;
@@ -440,7 +446,7 @@
     max-width: 200px;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'openSans-extraBold', sans-serif;
+    font-family: "openSans-extraBold", sans-serif;
 }
 
 .btn-service {
@@ -458,7 +464,12 @@
     position: relative;
     width: 100%;
     min-height: 420px;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%), url(/assets/containers.jpg);
+    background-image: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 1) 100%
+        ),
+        url(/assets/containers.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -476,7 +487,7 @@
 .figures-text {
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-family: 'openSans-extraBold', sans-serif;
+    font-family: "openSans-extraBold", sans-serif;
 }
 
 .figures-cards {
@@ -503,12 +514,16 @@
     border-radius: 20px;
     gap: 10px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-    background: linear-gradient(180deg, rgba(171, 221, 238, 0.1) 0%, rgb(171, 221, 238) 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(171, 221, 238, 0.1) 0%,
+        rgb(171, 221, 238) 100%
+    );
 }
 
 .figure-card-title {
     font-size: 2rem;
-    font-family: 'openSans-extraBold', sans-serif;
+    font-family: "openSans-extraBold", sans-serif;
 }
 
 .figure-desc {
@@ -538,7 +553,7 @@
 
 .asociation-desc {
     font-size: 0.9rem;
-    font-family: 'openSans-regular', sans-serif;
+    font-family: "openSans-regular", sans-serif;
 }
 
 .asociation-image {
@@ -571,7 +586,7 @@
 /* Footer */
 .footer {
     width: 100%;
-    background-color: #012B5D;
+    background-color: #012b5d;
 }
 
 .footer-container {
@@ -618,7 +633,7 @@
 
 .footer-list-link {
     text-decoration: none;
-    font-family: 'condensed-regular', sans-serif;
+    font-family: "condensed-regular", sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
@@ -630,7 +645,7 @@
     margin-bottom: 10px;
     font-size: 0.8rem;
     text-align: center;
-    font-family: 'openSans-regular', sans-serif;
+    font-family: "openSans-regular", sans-serif;
     width: fit-content;
 }
 
@@ -645,61 +660,59 @@
 }
 
 /*WhatsApp Button*/
-.whatssapp-button-container{
+.whatssapp-button-container {
     position: fixed;
     right: 60px;
     bottom: 20px;
     width: 40px;
 }
 
-.whatssapp-button-container > p{
+.whatssapp-button-container > p {
     width: 100px;
 }
 
-
-
 /* Responsive design */
-@media screen and (max-width: 1070px){
+@media screen and (max-width: 1070px) {
     .menu {
-      display: block;
+        display: block;
     }
 
-    .nav-list{
+    .nav-list {
         display: none;
         gap: 0;
     }
 
-    .feature-title{
+    .feature-title {
         font-size: 3rem;
     }
 
     .footer-container,
-    .footer-list-container{
+    .footer-list-container {
         flex-direction: column;
         gap: 20px;
     }
 
     .figures-cards,
     .asociations-cards,
-    .services-cards{
+    .services-cards {
         justify-content: center;
     }
 }
 
-@media screen and (max-width:768px) {
-    .feature-text{
+@media screen and (max-width: 768px) {
+    .feature-text {
         padding: 0 7px;
     }
-    .feature-title{
+    .feature-title {
         font-size: 1.5rem;
     }
 
-    .feature-desc{
+    .feature-desc {
         max-width: 90%;
         font-size: 0.8rem;
     }
 
-    .service-card{
+    .service-card {
         flex: 1;
     }
 }
